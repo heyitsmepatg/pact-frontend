@@ -4,7 +4,7 @@ import "./App.css";
 
 function App() {
   const serviceUrl =
-    process.env.UNDERCUT_SERVICE_URL || "http://localhost:3000/hello";
+    process.env.UNDERCUT_SERVICE_URL || "http://localhost:3000/";
   const [data, setData] = useState([]);
 
   useEffect(() => {
