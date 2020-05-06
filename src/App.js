@@ -27,6 +27,15 @@ function App() {
         <p>
           Welcome to Undercut <span role="img">💇</span>
         </p>
+
+        <form>
+            <label>
+                Location: 
+                <input type="text" location="location" />
+            </label>
+            <input type="submit" value="Submit" />
+        </form>
+
         <p>
           Received data from our api: <strong>{data}</strong>
         </p>
