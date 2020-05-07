@@ -3,10 +3,10 @@ import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
-  let serviceUrl = "http://localhost:3000";
-  if (process.env.DEMO_SERVICE_SERVICE_HOST) {
-    serviceUrl = `${process.env.DEMO_SERVICE_SERVICE_HOST}:${process.env.DEMO_SERVICE_SERVICE_PORT_HTTP}`;
-  }
+  let serviceUrl = "http://35.222.57.125";
+  // if (process.env.DEMO_SERVICE_SERVICE_HOST) {
+  //   serviceUrl = `${process.env.DEMO_SERVICE_SERVICE_HOST}:${process.env.DEMO_SERVICE_SERVICE_PORT_HTTP}`;
+  // }
   console.log(`serviceUrl is ${serviceUrl}`);
   const [data, setData] = useState([]);
 
