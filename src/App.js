@@ -3,8 +3,11 @@ import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
-  const serviceUrl =
-    process.env.UNDERCUT_SERVICE_URL || "http://localhost:3000";
+  let serviceUrl = "http://localhost:3000";
+  if (process.env.DEMO_SERVICE_SERVICE_HOST) {
+    serviceUrl = `${process.env.DEMO_SERVICE_SERVICE_HOST}:${process.env.DEMO_SERVICE_SERVICE_PORT_HTTP}`;
+  }
+  console.log(`serviceUrl is ${serviceUrl}`);
   const [data, setData] = useState([]);
 
   const [message, setMessage] = useState([]);
