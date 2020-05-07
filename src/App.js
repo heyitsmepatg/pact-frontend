@@ -28,7 +28,10 @@ function App() {
     const postUrl = `${serviceUrl}/message`;
     const response = await fetch(postUrl, {
       method: "post",
-      body: { message: event.target.value },
+      body: JSON.stringify({ message }),
+      headers: {
+        "Content-Type": "application/json",
+      },
     });
     console.log(
       `Response from POST request is: ${JSON.stringify(response.JSON)}`
